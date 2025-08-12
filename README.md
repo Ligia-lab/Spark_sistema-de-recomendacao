@@ -29,17 +29,17 @@ pip install pyspark spotipy scipy scikit-image matplotlib python-dotenv
 ```
 
 ## 🧠 Como o modelo funciona (visão rápida)
-
+```
 flowchart LR
-    A[Dados de músicas<br/>id, artists, name, features] --> B[VectorAssembler<br/>features]
-    B --> C[StandardScaler<br/>scaled_features]
-    C --> D[PCA(k)<br/>pca_features]
-    D --> E[KMeans(k)<br/>cluster_pca]
-    E --> F[projection_m<br/>id, artists_song, pca_features, cluster_pca]
+    A[Dados de músicas<>id, artists, name, features] --> B[VectorAssembler<>features]
+    B --> C[StandardScaler<>scaled_features]
+    C --> D[PCA(k)<>pca_features]
+    D --> E[KMeans(k)<>cluster_pca]
+    E --> F[projection_kmeans<>id, artists_song, pca_features, cluster_pca]
     F --> G[Consulta música alvo]
-    G --> H[Distância Euclidiana<br/>mesmo cluster]
-    H --> I[Top-N similares<br/>capas + links Spotify]
-
+    G --> H[Distância Euclidiana<>mesmo cluster]
+    H --> I[Top-N similares<>capas + links Spotify]
+```
 🧩 Estrutura (sugerida)
 ```
 .
