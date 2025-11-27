@@ -40,17 +40,6 @@ flowchart LR
     G --> H[Distância Euclidiana<>mesmo cluster]
     H --> I[Top-N similares<>capas + links Spotify]
 ```
-🧩 Estrutura (sugerida)
-```
-.
-├─ notebooks/
-│  └─ 01_modelagem_pca_kmeans.ipynb
-├─ src/
-│  ├─ recommender.py
-│  └─ viz.py
-├─ data/           # opcional (se não usar API p/ tudo)
-├─ README.md
-└─ requirements.txt
 
 
 
